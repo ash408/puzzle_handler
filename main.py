@@ -1,7 +1,7 @@
 import os
 import sys
-import string
 
+import rot
 #Setup argparse (I'm lazy)
 
 def main(working_dir, cipher):
@@ -20,14 +20,7 @@ def generate(cipher, text_path):
 		print("Unsupported cipher type")
 		sys.exit()
 
-	#move this out of this file, once again just being lazy
-	list_letters = list(string.ascii_lowercase)
-	letter_dict = {}
-	index = 0
-	
-	for letter in list_letters:
-		letter_dict[letter] = index
-		index = index + 1
+	letter_dict = rot.setup_index()
 	print(letter_dict)
 		
 
