@@ -37,12 +37,9 @@ def rotate(rot_num, character):
 	index_dict = {v: k for k, v in letter_dict.items()}
 	max_index = 26
 
-	print(character)
-
 	index = letter_dict.get(character)
 
 	if index is not None:
-		print(index)
 		index = index + rot_num
 		index = index % max_index
 
